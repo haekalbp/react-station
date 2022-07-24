@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header pt-4 pb-3">
-                    <h2>Article</h2>
+                    <h2>Search Result</h2>
                 </div>
                 <div class="card-body pb-1 mt-2">
                     <div class="row col-md-12 mb-3">

@@ -1,6 +1,10 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +17,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// default (used to manage the authentication)
+Auth::routes();
+
+// front-page
 Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+// home
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/admin/home', [App\Http\Controllers\HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+// search
+Route::get('/search', [HomeController::class, 'search']);
+Route::get('/posts/search', [HomeController::class, 'adminSearch'])->middleware('is_admin');
+
+// crud (admin)
+Route::resource('posts', PostController::class)->middleware('is_admin');
