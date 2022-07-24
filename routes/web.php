@@ -27,7 +27,7 @@ Route::get('/', function () {
 
 // home
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/admin', [HomeController::class, 'adminHome'])->name('admin.home')->middleware('is_admin');
+Route::get('/admin', [PostController::class, 'index'])->name('admin.posts')->middleware('is_admin');
 
 // search
 Route::get('/search', [HomeController::class, 'search']);

@@ -23,12 +23,6 @@
                         </div>
                     </div>
                 
-                    @if ($message = Session::get('success'))
-                        <div class="alert alert-success pt-3 pb-0 d-flex align-items-center justify-content-center">
-                            <p>{{ $message }}</p>
-                        </div>
-                    @endif
-                
                     <table class="table table-bordered">
                         <tr>
                             <th>No.</th>
@@ -53,11 +47,7 @@
                         </tr>
                         @endforeach
                     </table>
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    
                 </div>
             </div>
         </div>

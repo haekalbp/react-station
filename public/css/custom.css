@@ -1,0 +1,7 @@
+.bg-teal-polka {
+    background-image: radial-gradient(#f81616 4%, transparent 5%),
+        radial-gradient(#f81616 4%, transparent 5%);
+    background-position: 0px 0px, 22px 22px;
+    background-size: 44px 44px;
+    background-color: #d4f6cc;
+}

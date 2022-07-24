@@ -27,16 +27,14 @@ class HomeController extends Controller
         $posts = Post::all();
         return view('home', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
-    public function adminHome()
-    {
-        return view('admin');
-    }
+    
     public function search(Request $request)
     {
         $get_keyword = $request->search_name;
         $posts = Post::where('title', 'LIKE', '%'.$get_keyword.'%')->orWhere('body', 'LIKE', '%'.$get_keyword.'%')->get();
         return view('search', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
     public function adminSearch(Request $request)
     {
         $get_keyword = $request->search_name;

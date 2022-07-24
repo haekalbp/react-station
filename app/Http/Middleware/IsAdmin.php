@@ -4,6 +4,7 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class IsAdmin
 {
@@ -20,6 +21,8 @@ class IsAdmin
         {
             return $next($request);
         }
-        return redirect('home')->with('error', 'You dont have access to admin');
+        Alert::error('Access Denied', 'You dont have permission to access the page.');
+
+        return redirect('home');
     }
 }

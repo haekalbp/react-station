@@ -19,25 +19,22 @@
                             </div>
                         </form>
                     </div>
+                    
                     <table class="table table-bordered">
-                    <tr>
-                        <th>No.</th>
-                        <th>Title</th>
-                        <th>Content</th>
-                    </tr>
-                    @foreach ($posts as $post)
-                    <tr>
-                        <td>{{ ++$i }}</td>
-                        <td>{{ Str::limit($post->title, 10) }}</td>
-                        <td class="text-start">{{ $post->body }}</td>
-                    </tr>    
-                    @endforeach
+                        <tr>
+                            <th>No.</th>
+                            <th>Title</th>
+                            <th>Content</th>
+                        </tr>
+                        @foreach ($posts as $post)
+                        <tr>
+                            <td>{{ ++$i }}</td>
+                            <td>{{ Str::limit($post->title, 10) }}</td>
+                            <td class="text-start">{{ $post->body }}</td>
+                        </tr>    
+                        @endforeach
                     </table>
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    
                 </div>
             </div>
         </div>
