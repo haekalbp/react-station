@@ -5,7 +5,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header pt-4 pb-3">
-                    <h1>New Article</h1>
+                    <h1>New Post</h1>
                 </div>
                 <div class="card-body">
                 <div class="row">

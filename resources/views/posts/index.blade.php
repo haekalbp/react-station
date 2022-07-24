@@ -18,13 +18,13 @@
                         </form>
                         <div class="col-md-2">
                             <div class="text-end my-3">
-                                <a class="btn btn-success" href="{{ route('posts.create') }}">Create New Article</a>
+                                <a class="btn btn-success px-3" href="{{ route('posts.create') }}">Create New Post</a>
                             </div>
                         </div>
                     </div>
                 
                     @if ($message = Session::get('success'))
-                        <div class="alert alert-success">
+                        <div class="alert alert-success pt-3 pb-0 d-flex align-items-center justify-content-center">
                             <p>{{ $message }}</p>
                         </div>
                     @endif
@@ -39,8 +39,8 @@
                         @foreach ($posts as $post)
                         <tr>
                             <td>{{ ++$i }}</td>
-                            <td>{{ $post->title }}</td>
-                            <td class="text-start">{{ $post->body }}</td>
+                            <td>{{ Str::limit($post->title, 10) }}</td>
+                            <td class="text-start">{{ Str::limit($post->body, 195) }}</td>
                             <td class="d-flex justify-content-center">
                                  <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">View</a>
                                     <a class="btn btn-primary mx-3" href="{{ route('posts.edit',$post->id) }}">Edit</a>

@@ -6,7 +6,7 @@
         <div class="col-md-10">
             <div class="card">
                 <div class="card-header pt-4 pb-3">
-                    <h2>Article</h2>
+                    <h2>Posts</h2>
                 </div>
                 <div class="card-body pb-1 mt-2">
                     <div class="row col-md-12 mb-3">
@@ -28,7 +28,7 @@
                     @foreach ($posts as $post)
                     <tr>
                         <td>{{ ++$i }}</td>
-                        <td>{{ $post->title }}</td>
+                        <td>{{ Str::limit($post->title, 10) }}</td>
                         <td class="text-start">{{ $post->body }}</td>
                     </tr>    
                     @endforeach
