@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class PostController extends Controller
 {
@@ -15,7 +17,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all();
-
+        
         return view('posts.index', compact('posts'))->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -44,7 +46,8 @@ class PostController extends Controller
 
         Post::create($request->all());
 
-        return redirect()->route('posts.index')->with('success','Post Created Successfully!');
+        Alert::success('Good Job!', 'Your post has been created.');
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -85,7 +88,8 @@ class PostController extends Controller
 
         $post->update($request->all());
 
-        return redirect()->route('posts.index')->with('success','Post Updated Successfully!');
+        Alert::success('Great Job!', 'Your post has been updated.');
+        return redirect()->route('posts.index');
     }
 
     /**
@@ -96,8 +100,9 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-      $post->delete();
+       $post->delete();
 
-       return redirect()->route('posts.index')->with('success','Post Deleted successfully!');
+       Alert::success('Success!', 'Your post has been deleted.');
+       return redirect()->route('posts.index');
     }
 }

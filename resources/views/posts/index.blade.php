@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 <div class="container text-center">
@@ -45,7 +45,6 @@
                                  <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">View</a>
                                     <a class="btn btn-primary mx-3" href="{{ route('posts.edit',$post->id) }}">Edit</a>
                                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
-                   
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Delete</button>
