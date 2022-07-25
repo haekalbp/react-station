@@ -21,9 +21,10 @@ use App\Http\Controllers\PostController;
 Auth::routes();
 
 // front-page
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+Route::get('/', [HomeController::class, 'home']);
 
 // home
 Route::get('/home', [HomeController::class, 'index'])->name('home');
