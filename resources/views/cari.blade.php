@@ -3,8 +3,8 @@
 @section('content')
 <div class="bg-polka text-center c-pad">
   <div class="row">
-    <h1 class="col-md-12 fw-bold" style="font-size: 5rem; margin-top: 4rem;">React Station</h1>
-    <p class="fs-4">The most efficient and supportive way for you to learn in-demand skills.</p>
+    <h1 class="col-md-12 fw-bold" style="font-size: 5rem; margin-top: 4rem;">Search Result</h1>
+    <p class="fs-4">Your search result.</p>
   </div>
   
   <div class="container c-mar">
@@ -27,11 +27,6 @@
         </a>
       </div>
       @endforeach
-    </div>
-    <div class="d-flex align-items-center justify-content-center c-mar2">
-      <a class="btn btn-dark" href="{{ route('home') }}">
-        Get Exclusive Tutorials
-      </a>
     </div>
   </div>
 </div>

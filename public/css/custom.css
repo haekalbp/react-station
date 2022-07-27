@@ -1,4 +1,5 @@
-.bg-teal-polka {
+/* welcome */
+.bg-polka {
     background-image: radial-gradient(#f81616 4%, transparent 5%),
         radial-gradient(#f81616 4%, transparent 5%);
     background-position: 0px 0px, 22px 22px;
@@ -6,6 +7,15 @@
     background-color: #d4f6cc;
 }
 
+.bg-user-polka {
+    background-image: radial-gradient(#f81616 4%, transparent 5%),
+        radial-gradient(#f81616 4%, transparent 5%);
+    background-position: 0px 0px, 22px 22px;
+    background-size: 44px 44px;
+    background-color: #fff89c;
+}
+
+/* card */
 .glass {
     background: rgba(255, 255, 255, 0.25);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -13,4 +23,47 @@
     -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass:hover {
+    transform: scale(0.95);
+    transition: 0.35s;
+    overflow: hidden;
+}
+
+/* welcome  */
+.c-pad {
+    padding-bottom: 8rem;
+}
+
+.c-mar {
+    margin-top: 2.5rem;
+}
+
+.c-mar2 {
+    margin-top: 4rem;
+}
+
+/* auth.login & auth.register */
+.cm-log {
+    margin-top: 6rem;
+    margin-bottom: 9rem;
+}
+
+/* posts.show */
+.cm-adm-show {
+    margin-top: 2rem;
+    margin-bottom: 14rem;
+}
+
+/* posts.create % posts.edit */
+.cm-adm-ce {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+}
+
+/* show */
+.cm-show {
+    margin-top: 2rem;
+    margin-bottom: 16rem;
 }

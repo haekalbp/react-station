@@ -36,8 +36,8 @@
                             <td>{{ Str::limit($post->title, 10) }}</td>
                             <td class="text-start">{{ Str::limit($post->body, 195) }}</td>
                             <td class="d-flex justify-content-center">
-                                 <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">View</a>
-                                    <a class="btn btn-primary mx-3" href="{{ route('posts.edit',$post->id) }}">Edit</a>
+                                <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">View</a>
+                                <a class="btn btn-primary mx-3" href="{{ route('posts.edit',$post->id) }}">Edit</a>
                                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')

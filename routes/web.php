@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\WelcomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,19 +20,19 @@ use App\Http\Controllers\PostController;
 
 // default (used to manage the authentication)
 Auth::routes();
-
-// front-page
-Route::get('/', function () {
-    return view('welcome');
-});
-
-// home
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+// admin
 Route::get('/admin', [PostController::class, 'index'])->name('admin.posts')->middleware('is_admin');
-
-// search
-Route::get('/search', [HomeController::class, 'search']);
 Route::get('/posts/search', [HomeController::class, 'adminSearch'])->middleware('is_admin');
 
 // crud (admin)
 Route::resource('posts', PostController::class)->middleware('is_admin');
+
+// user
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/search', [HomeController::class, 'search']);
+Route::get('/member/{post}', [HomeController::class, 'show'])->name('view');
+
+// non-user
+Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
+Route::get('/cari', [WelcomeController::class, 'cari']);
+Route::get('/{post}', [WelcomeController::class, 'show'])->name('show');

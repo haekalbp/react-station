@@ -1,6 +1,6 @@
-@extends('layouts.admin')
+@extends('layouts.user')
 @section('content')
-<div class="container text-center cm-adm-show">
+<div class="container text-center mt-5 cm-show">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-right">
-                                <a class="btn btn-primary" href="{{ route('posts.index') }}">Back to Dashboard</a>
+                                <a class="btn btn-primary" href="{{ route('home') }}">Back to Dashboard</a>
                             </div>
                         </div>
                     </div>

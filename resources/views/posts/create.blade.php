@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 @section('content')
-<div class="container text-center">
+<div class="container text-center cm-adm-ce">
     <div class="row justify-content-center">
         <div class="col-md-10">
             <div class="card">
