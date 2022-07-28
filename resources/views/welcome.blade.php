@@ -30,7 +30,7 @@
     </div>
     <div class="d-flex align-items-center justify-content-center c-mar2">
       <a class="btn btn-dark shadow" href="{{ route('home') }}">
-        Get Exclusive Tutorials
+        Get More Tutorials
       </a>
     </div>
   </div>

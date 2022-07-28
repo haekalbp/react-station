@@ -9,7 +9,7 @@ class WelcomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderBy('created_at', 'DESC')->get();
+        $posts = Post::all();
 
         return view('welcome', compact('posts'));
     }

@@ -7,6 +7,7 @@
     background-color: #f6e3c5;
 }
 
+/* admin */
 .bg-admin-polka {
     background-image: radial-gradient(#f81616 4%, transparent 5%),
         radial-gradient(#f81616 4%, transparent 5%);
@@ -15,6 +16,7 @@
     background-color: #abc9ff;
 }
 
+/* user */
 .bg-user-polka {
     background-image: radial-gradient(#f81616 4%, transparent 5%),
         radial-gradient(#f81616 4%, transparent 5%);
