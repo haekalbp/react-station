@@ -1,10 +1,11 @@
 @extends('layouts.admin')
 
 @section('content')
+<div class="bg-admin-polka py-5">
 <div class="container text-center">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header pt-4 pb-3"><h1>Dashboard</h1></div>
                 <div class="card-body">
                     <div class="row">
@@ -13,7 +14,7 @@
                                 <div class="form-group me-2 " style="width: 48rem;">
                                     <input type="text" name="search_name" class="form-control" placeholder="search here..">
                                 </div>
-                                <button class="btn btn-primary " style="width: 6rem;">Search</button>
+                                <button class="btn btn-dark" style="width: 6rem;">Search</button>
                             </div>
                         </form>
                         <div class="col-md-2">
@@ -52,5 +53,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

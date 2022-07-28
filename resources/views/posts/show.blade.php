@@ -1,9 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+<div class="bg-admin-polka py-4">
 <div class="container text-center cm-adm-show">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header pt-4 pb-3">
                     <h1>{{ $post->title }}</h1>
                 </div>
@@ -18,7 +19,7 @@
                     <div class="row">
                         <div class="col-lg-12 margin-tb">
                             <div class="pull-right">
-                                <a class="btn btn-primary" href="{{ route('posts.index') }}">Back to Dashboard</a>
+                                <a class="btn btn-dark" href="{{ route('posts.index') }}">Back to Dashboard</a>
                             </div>
                         </div>
                     </div>
@@ -26,5 +27,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

@@ -4,7 +4,15 @@
         radial-gradient(#f81616 4%, transparent 5%);
     background-position: 0px 0px, 22px 22px;
     background-size: 44px 44px;
-    background-color: #d4f6cc;
+    background-color: #f6e3c5;
+}
+
+.bg-admin-polka {
+    background-image: radial-gradient(#f81616 4%, transparent 5%),
+        radial-gradient(#f81616 4%, transparent 5%);
+    background-position: 0px 0px, 22px 22px;
+    background-size: 44px 44px;
+    background-color: #abc9ff;
 }
 
 .bg-user-polka {

@@ -1,10 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container py-4 cm-log">
+<div class="bg-polka py-1">
+<div class="container cm-log">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -73,5 +74,6 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

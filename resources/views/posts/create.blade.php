@@ -1,9 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+<div class="bg-admin-polka py-4">
 <div class="container text-center cm-adm-ce">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card shadow">
                 <div class="card-header pt-4 pb-3">
                     <h1>New Post</h1>
                 </div>
@@ -51,6 +52,7 @@
             </form>
         </div>
     </div>
+</div>
 </div>
 </div>
 </div>

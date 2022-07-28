@@ -19,7 +19,7 @@
       </form>
     </div>
     <div class="row gy-5 align-items-center justify-content-center mb-5">
-      @foreach ($posts as $post)
+      @foreach ($posts->slice(0, 6) as $post)
       <div class="col-3 glass py-3 mx-4">
         <a class="text-decoration-none text-dark" href="{{ route('show',$post->id) }}">
           <h2>{{ $post->title }}</h2>
@@ -29,7 +29,7 @@
       @endforeach
     </div>
     <div class="d-flex align-items-center justify-content-center c-mar2">
-      <a class="btn btn-dark" href="{{ route('home') }}">
+      <a class="btn btn-dark shadow" href="{{ route('home') }}">
         Get Exclusive Tutorials
       </a>
     </div>
